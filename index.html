@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clock</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="clock">
+        <h2>The time is </h2>
+        <div class="time">
+            <div><span id="hour">00</span><span>Hours</span></div>
+            <div><span id="minute">00</span><span>Minutes</span></div>
+            <div><span id="second">00</span><span>Seconds</span></div>
+
+        </div>
+    </div>
+    
+    <script>
+        function clock(){
+            const hours=document.getElementById('hour');
+            const minutes=document.getElementById('minute');
+            const seconds=document.getElementById('second');
+
+            const h = new Date().getHours();
+            const m = new Date().getMinutes();
+            const s = new Date().getSeconds();
+
+            hours.innerHTML=h;
+            minutes.innerHTML=m;
+            seconds.innerHTML=s;
+        }
+        var interval = setInterval(clock,1000);
+    </script>
+</body>
+</html>
